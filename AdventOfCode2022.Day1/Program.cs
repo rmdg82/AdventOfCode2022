@@ -1,12 +1,12 @@
-﻿using AdventOfCode2022.Shared.Helpers;
+﻿using Shared.Helpers;
 
-namespace AdventOfCode2022.Day1
+namespace Day1
 {
     public static class Program
     {
         private static void Main(string[] args)
         {
-            var input = (new InputHelper()).GetInput();
+            var input = new InputHelper().GetInput();
             SolvePart1(input);
             SolvePart2(input);
         }

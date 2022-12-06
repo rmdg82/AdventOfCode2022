@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode2022.Day1;
+namespace Day1;
 
 public static class App
 {
-    private static string _separator = string.Empty;
+    private static readonly string _separator = string.Empty;
 
     public static int SolvePart1(string[] input)
     {

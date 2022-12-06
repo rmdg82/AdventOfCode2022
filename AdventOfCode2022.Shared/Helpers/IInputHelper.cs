@@ -1,4 +1,4 @@
-﻿namespace AdventOfCode2022.Shared.Helpers;
+﻿namespace Shared.Helpers;
 
 public interface IInputHelper
 {
