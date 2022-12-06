@@ -1,4 +1,4 @@
-﻿using AdventOfCode2022.Shared.Helpers;
+﻿using Shared.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
