@@ -12,7 +12,7 @@ public class InputHelper : IInputHelper
 {
     private const string _fileName = "input.txt";
     private const string _folderName = "Input";
-    public string InputFilePath { get; init; }
+    public string InputFileFolderPath { get; init; }
 
     public InputHelper()
     {
@@ -20,17 +20,24 @@ public class InputHelper : IInputHelper
 
         var currentProjectDirectory = Directory.GetParent(executingAssemblyFolder)!.Parent!.Parent;
 
-        InputFilePath = Path.Combine(currentProjectDirectory!.FullName, _folderName, _fileName) ?? throw new Exception("Could not find input file");
+        InputFileFolderPath = Path.Combine(currentProjectDirectory!.FullName, _folderName) ?? throw new Exception("Could not build input file");
 
-        if (!File.Exists(InputFilePath))
+        if (!Directory.Exists(InputFileFolderPath))
         {
-            throw new FileNotFoundException($"File not found: {InputFilePath}");
+            throw new FileNotFoundException($"Folder not found: {InputFileFolderPath}");
         }
     }
 
-    public string[] GetInput()
+    public string[] GetInput(string? filename = null)
     {
-        var input = File.ReadAllLines(InputFilePath);
+        var filePath = Path.Combine(InputFileFolderPath, filename ?? _fileName);
+
+        if (!File.Exists(filePath))
+        {
+            throw new FileNotFoundException($"File not found: {filePath}");
+        }
+
+        var input = File.ReadAllLines(filePath);
         return input ?? throw new Exception("Could not read input file");
     }
 }

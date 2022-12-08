@@ -2,7 +2,7 @@
 
 public interface IInputHelper
 {
-    string InputFilePath { get; init; }
+    string InputFileFolderPath { get; init; }
 
-    string[] GetInput();
+    string[] GetInput(string? filename = null);
 }
