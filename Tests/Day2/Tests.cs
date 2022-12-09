@@ -16,7 +16,7 @@ public class Tests
 
     public Tests()
     {
-        _inputHelper = new TestInputHelper("Day4");
+        _inputHelper = new TestInputHelper("Day2");
     }
 
     [Fact]

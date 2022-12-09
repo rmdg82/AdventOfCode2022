@@ -1,8 +1,13 @@
-﻿using Day1;
+﻿using AdventOfCode2022.Tests;
+using Day4;
 using Shared.Helpers;
-using AdventOfCode2022.Tests;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Tests.Day1;
+namespace Tests.Day4;
 
 public class Tests
 {
@@ -10,26 +15,26 @@ public class Tests
 
     public Tests()
     {
-        _inputHelper = new TestInputHelper("Day1");
+        _inputHelper = new TestInputHelper("Day4");
     }
 
     [Fact]
     public void SolvePart1_ShouldReturnCorrectSolution_WhenInputIsFromExample()
     {
-        const int expectedCalories = 24000;
+        const int expectedResult = 2;
 
         var solution = App.SolvePart1(_inputHelper.GetInput());
 
-        Assert.Equal(expectedCalories, solution);
+        Assert.Equal(expectedResult, solution);
     }
 
     [Fact]
     public void SolvePart2_ShouldReturnCorrectSolution_WhenInputIsFromExample()
     {
-        const int expectedCalories = 45000;
+        const int expectedResult = 70;
 
         var solution = App.SolvePart2(_inputHelper.GetInput());
 
-        Assert.Equal(expectedCalories, solution);
+        Assert.Equal(expectedResult, solution);
     }
 }
