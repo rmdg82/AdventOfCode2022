@@ -1,4 +1,5 @@
-﻿using Day3;
+﻿using AdventOfCode2022.Tests;
+using Day3;
 using Shared.Helpers;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode2022.Tests.Day3;
+namespace Tests.Day3;
 
 public class Tests
 {

@@ -1,4 +1,5 @@
-﻿using Day2;
+﻿using AdventOfCode2022.Tests;
+using Day2;
 using NSubstitute;
 using Shared.Helpers;
 using System;
@@ -7,17 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdventOfCode2022.Tests.Day2;
+namespace Tests.Day2;
 
 public class Tests
 {
-    private readonly IInputHelper _inputHelper;
+    private readonly TestInputHelper _inputHelper;
 
     public Tests()
     {
-        _inputHelper = Substitute.For<IInputHelper>();
-
-        _inputHelper.GetInput().Returns((new TestInputHelper("Day2")).GetInput());
+        _inputHelper = new TestInputHelper("Day4");
     }
 
     [Fact]

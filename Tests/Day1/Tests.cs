@@ -1,18 +1,16 @@
-﻿using NSubstitute;
-using Day1;
+﻿using Day1;
 using Shared.Helpers;
+using AdventOfCode2022.Tests;
 
-namespace AdventOfCode2022.Tests.Day1;
+namespace Tests.Day1;
 
 public class Tests
 {
-    private readonly IInputHelper _inputHelper;
+    private readonly TestInputHelper _inputHelper;
 
     public Tests()
     {
-        _inputHelper = Substitute.For<IInputHelper>();
-
-        _inputHelper.GetInput().Returns((new TestInputHelper("Day1")).GetInput());
+        _inputHelper = new TestInputHelper("Day4");
     }
 
     [Fact]
