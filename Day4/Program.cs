@@ -1,6 +1,7 @@
 ﻿using Shared.Helpers;
 
 namespace Day4;
+
 public static class Program
 {
     private static void Main(string[] args)
@@ -14,7 +15,7 @@ public static class Program
     {
         var solution = App.SolvePart1(input);
 
-        var solutionMessage = $"The elf carrying most calories has {solution} calories.";
+        var solutionMessage = $"The number of assignment pairs that fully contain the other are {solution}.";
         Console.WriteLine(solutionMessage);
     }
 
@@ -22,7 +23,7 @@ public static class Program
     {
         var solution = App.SolvePart2(input);
 
-        var solutionMessage = $"The top three Elves total calories are {solution}";
+        var solutionMessage = $"The number of assignment pairs that overlap the other are {solution}.";
         Console.WriteLine(solutionMessage);
     }
 }

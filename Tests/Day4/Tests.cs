@@ -31,7 +31,7 @@ public class Tests
     [Fact]
     public void SolvePart2_ShouldReturnCorrectSolution_WhenInputIsFromExample()
     {
-        const int expectedResult = 70;
+        const int expectedResult = 4;
 
         var solution = App.SolvePart2(_inputHelper.GetInput());
 
